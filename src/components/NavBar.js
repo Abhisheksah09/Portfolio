@@ -9,7 +9,7 @@ function NavBar() {
       <div className="flex justify-between items-center w-full h-[100px] text-white bg-black  px-4">
         <div>
           <img
-            className="w-[10%] border rounded-[50%]  mx-[60px] cursor-pointer"
+            className="w-[10%] border rounded-[50%]  md:mx-[60px] cursor-pointer"
             src={image}
             alt="Logo"
           />
