@@ -7,9 +7,7 @@ import node from "../Images/NODE.png";
 import express from "../Images/express.png";
 import tailwind from "../Images/Tailwind.png";
 import mongodb from "../Images/mongodb.png";
-import aceternity from "../Images/Aceternity.png";
 import sql from "../Images/SQL.png";
-import wordpress from "../Images/wordpress.png";
 
 const Skills = () => {
   const techs = [
@@ -57,15 +55,15 @@ const Skills = () => {
     },
     {
       id: 7,
-      src: aceternity,
-      title: "Aceternity UI",
-      style: "shadow-white",
-    },
-    {
-      id: 8,
       src: mongodb,
       title: "mongoDB",
       style: "shadow-green-600",
+    },
+    {
+      id: 8,
+      src: sql,
+      title: "SQL",
+      style: "shadow-blue-500",
     },
   ];
   return (
@@ -74,22 +72,23 @@ const Skills = () => {
         name="skills"
         className="bg-gradient-to-b from-gray-900 to-black w-full "
       >
+        <div className="mx-[8rem] py-10">
+          <h1 className=" text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
+            Skills
+          </h1>
+          <p className="py-6 text-white">
+            These are the technologies I've worked with
+          </p>
+        </div>
         <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-          <div>
-            <h1 className=" text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
-              Skills
-            </h1>
-            <p className="py-6">These are the technologies I've worked with</p>
-          </div>
-
-          <div className=" w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 sm:px-0">
+          <div className=" w-full grid grid-cols-2 mx-auto sm:grid-cols-3 gap-8 text-center py-8 sm:px-0">
             {techs.map(({ id, src, title, style }) => {
               return (
                 <div
                   key={id}
                   className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
                 >
-                  <img src={src} alt="" className="w-20 mx-auto" />
+                  <img src={src} alt="" className="w-20 m-auto" />
                   <p className=" mt-4">{title}</p>
                 </div>
               );

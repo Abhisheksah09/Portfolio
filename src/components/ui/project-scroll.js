@@ -33,23 +33,23 @@ const StickyScroll = ({ content, contentClassName }) => {
     "var(--gray-800)",
   ];
   const linearGradients = [
-    // "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    // "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    // "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
+    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
+    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto overflow-x-hidden flex justify-center relative space-x-40 rounded-md p-10"
+      className="h-[30rem] overflow-y-auto overflow-x-hidden flex justify-center relative space-x-10 lg:space-x-40 rounded-md p-5 lg:p-10"
       ref={ref}
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+      <div className="relative flex flex-col lg:flex-row items-start px-4 w-full max-w-2xl">
+        <div className="w-full">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-10 lg:my-20">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -57,7 +57,7 @@ const StickyScroll = ({ content, contentClassName }) => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-100"
+                className="text-xl lg:text-2xl font-bold text-slate-100"
               >
                 {item.title}
               </motion.h2>
@@ -68,13 +68,14 @@ const StickyScroll = ({ content, contentClassName }) => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className=" text-kg text-justify text-slate-300 max-w-lg mt-10"
+                className="text-sm lg:text-base text-justify text-slate-300 mt-5 lg:mt-10"
               >
                 {item.description}
               </motion.p>
+              <div className="block lg:hidden mt-5">{item.content ?? null}</div>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-20 lg:h-40" />
         </div>
       </div>
       <motion.div
@@ -82,7 +83,7 @@ const StickyScroll = ({ content, contentClassName }) => {
           background: linearGradients[activeCard % linearGradients.length],
         }}
         className={cn(
-          "hidden lg:block h-80 w-90 rounded-md bg-white sticky top-10 overflow-hidden ",
+          "hidden lg:block h-80  w-full lg:w-90 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >

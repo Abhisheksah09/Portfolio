@@ -1,19 +1,37 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import LampDemo from "./components/blueLamp";
-import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
-import StickyScrollRevealDemo from "./components/ProjectShow";
+import Projects from "./components/ProjectShow";
+import Contact from "./components/Contact";
+import Home from "./components/blueLamp";
+import NavBar from "./components/NavBar";
+
 const App = () => {
   return (
-    <>
-      <div className="">
+    <div>
+      <div id="">
         <NavBar />
       </div>
-      <LampDemo />
-      <Skills />
-      <StickyScrollRevealDemo />
-    </>
+      <div id="home">
+        <Home />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+    </div>
   );
 };
 

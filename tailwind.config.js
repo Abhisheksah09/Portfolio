@@ -10,6 +10,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {},
+    fontFamily: {
+      allura: ["Allura", "cursive"],
+    },
   },
   plugins: [
     function ({ addBase, addUtilities, theme }) {
