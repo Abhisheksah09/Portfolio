@@ -12,27 +12,31 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="container  max-lg:bg-black mx-auto text-justify p-8 bg-black">
-      <div className="mx-4 sm:mx-[6rem] py-10">
-        <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
+    <div className="min-w-screen-lg bg-black text-white text-justify p-4 md:p-8">
+      <div className="mx-4 md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+        <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
           Experience
         </h1>
-        <p className="py-6 text-gray-300">Professional Experience</p>
+        <p className="py-4 md:py-6 text-gray-300">Professional Experience</p>
       </div>
-      <div className="grid gap-8  w-[80%] m-auto">
+      <div className="grid gap-4 md:gap-8 w-full">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-700 hover:shadow-lg"
+            className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 hover:bg-gray-700 hover:shadow-lg"
           >
-            <h2 className="text-xl sm:text-2xl font-semibold mb-2 text-white">
+            <h2 className="text-lg md:text-xl font-semibold mb-2 text-white text-center sm:text-left">
               {experience.role}
             </h2>
-            <h3 className="text-lg sm:text-xl mb-4 text-cyan-400">
+            <h3 className="text-base md:text-lg mb-4 text-cyan-400 text-center sm:text-left">
               {experience.company}
             </h3>
-            <p className="mb-4 text-gray-300">{experience.description}</p>
-            <p className="text-gray-500">{experience.duration}</p>
+            <p className="mb-4 text-gray-300 text-sm text-start md:text-base">
+              {experience.description}
+            </p>
+            <p className="text-gray-500 text-sm md:text-base">
+              {experience.duration}
+            </p>
           </div>
         ))}
       </div>

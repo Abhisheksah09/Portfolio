@@ -24,11 +24,11 @@ function Contact() {
 
   return (
     <div className="bg-black py-12 px-2">
-      <div className="mx-[8rem] py-10">
-        <h1 className=" text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
+      <div className="mx-4 md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+        <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
           Contact
         </h1>
-        <p className="py-6 text-white">Let's Work Together </p>
+        <p className="py-4 md:py-6 text-gray-300">Let's Work Together</p>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 lg:px-20">
@@ -71,12 +71,12 @@ function Contact() {
                 </button>
               </form>
             </div>
-            <div className="w-full lg:w-7/12 mt-8 lg:mt-0">
+            <div className="w-full lg:w-7/12 mt-8 lg:mt-0 text-center md:text-left">
               <div className="flex flex-wrap">
                 <div className="mb-12 w-full md:w-1/2 lg:px-6">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                      <div className="inline-block rounded-md bg-primary-100   text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -93,7 +93,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className="ml-6 grow">
+                    <div className=" grow">
                       <p className="mb-2 font-bold text-white">Contact</p>
                       <p className="text-neutral-500 dark:text-neutral-200 text-lg py-1">
                         8879003313
@@ -104,7 +104,7 @@ function Contact() {
                 <div className="mb-12 w-full md:w-1/2 lg:px-6">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                      <div className="inline-block rounded-md bg-primary-100   text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -121,7 +121,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className="ml-6 grow">
+                    <div className=" grow">
                       <p className="mb-2 font-bold text-white">Email</p>
                       <p className="text-neutral-500 dark:text-neutral-200">
                         sahabhishek097@gmail.com
@@ -133,7 +133,7 @@ function Contact() {
                 <div className="mb-12 w-full md:w-1/2 lg:px-6">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                      <div className="inline-block rounded-md bg-primary-100   text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -150,7 +150,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className="ml-6 grow">
+                    <div className=" grow">
                       <p className="mb-2 font-bold text-white">GitHub</p>
                       <p className="text-neutral-500 dark:text-neutral-200">
                         github.com/Abhisheksah09
@@ -162,7 +162,7 @@ function Contact() {
                 <div className="mb-12 w-full md:w-1/2 px-4 md:px-3 lg:px-6">
                   <div className="flex items-start">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                      <div className="inline-block rounded-md bg-primary-100   text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -179,7 +179,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className="ml-6 grow">
+                    <div className=" grow">
                       <p className="mb-2 font-bold text-white">LinkedIn</p>
                       <a
                         href="https://www.linkedin.com/in/abhishek-sah-782409265/"

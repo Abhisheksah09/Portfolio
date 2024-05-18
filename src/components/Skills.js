@@ -72,11 +72,11 @@ const Skills = () => {
         name="skills"
         className="bg-gradient-to-b from-gray-900 to-black w-full "
       >
-        <div className="mx-[8rem] py-10">
-          <h1 className=" text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
+        <div className="md:mx-[8rem] md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+          <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
             Skills
           </h1>
-          <p className="py-6 text-white">
+          <p className="py-4 md:py-6 text-gray-300">
             These are the technologies I've worked with
           </p>
         </div>

@@ -4,7 +4,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/ProjectShow";
 import Contact from "./components/Contact";
-import Home from "./components/blueLamp";
+import Home from "./components/lightLamp";
 import NavBar from "./components/NavBar";
 
 const App = () => {

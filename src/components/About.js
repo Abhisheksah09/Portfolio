@@ -3,9 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6">
-        <div className="w-full max-w-screen-xl mx-auto">
-          <div className="bg-black">
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-screen-xl">
+          <div className="bg-black text-center md:text-left">
             <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
               About
             </h1>
@@ -14,11 +14,10 @@ const About = () => {
               code.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 px-10  md:grid-cols-2 py-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-6 md:px-0 lg:px-8">
             {/* Info about me */}
-            <div className="p-6 px-10 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-800 hover:bg-gray-700 transform hover:-translate-y-1 hover:scale-105">
-              <p className="text-lg mb-2">
+            <div className="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-800 hover:bg-gray-700 transform hover:-translate-y-1 hover:scale-105">
+              <p className="text-lg mb-4 md:text-xl lg:text-lg">
                 As a dedicated Junior Full Stack Developer, I specialize in
                 crafting flawless web solutions with JavaScript, React.js, and
                 Redux for captivating front-end experiences. With expertise in
@@ -30,20 +29,20 @@ const About = () => {
                 bring a dynamic edge to any team, committed to excellence and
                 collaboration.
               </p>
-              <p className="text-lg mb-2">
+              <p className="text-lg mb-4 md:text-xl lg:text-lg">
                 I specialize in JavaScript, React, Node.js, Express.js, mongoDB,
-                SQL, Tailwind CSS, HTML, CSS . In my free time, I enjoy Playing
-                multiple sports as Football, Volleyball, Cricket and aslo
+                SQL, Tailwind CSS, HTML, CSS. In my free time, I enjoy playing
+                multiple sports such as Football, Volleyball, Cricket, and also
                 learning new programming languages.
               </p>
-              <p className="text-lg">
+              <p className="text-lg md:text-xl lg:text-lg">
                 I'm always excited to work on new projects and collaborate with
                 others. Feel free to reach out to me!
               </p>
             </div>
 
             {/* Education details */}
-            <div className="px-[4rem]">
+            <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold mb-4 ">Education</h1>
               <div className="mb-4">
                 <h2 className="text-2xl font-semibold">
@@ -72,7 +71,7 @@ const About = () => {
               </div>
               <div className="mb-4">
                 <h2 className="text-2xl font-semibold">Certifications</h2>
-                <p className="text-lg">Full-Stack JavaScrpit Web Development</p>
+                <p className="text-lg">Full-Stack JavaScript Web Development</p>
                 <p> - RST Forum</p>
               </div>
             </div>
