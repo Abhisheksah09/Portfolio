@@ -24,7 +24,7 @@ function Contact() {
 
   return (
     <div className="bg-black py-12 px-2">
-      <div className="mx-4 md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+      <div className="md:mx-[7rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
         <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
           Contact
         </h1>

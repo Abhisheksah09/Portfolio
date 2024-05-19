@@ -3,9 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-black text-white flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-screen-xl">
-          <div className="bg-black text-center md:text-left">
+          <div className="md:mx-[7rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
             <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
               About
             </h1>
@@ -14,7 +14,7 @@ const About = () => {
               code.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-6 md:px-0 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 py-6 md:px-10 lg:px-[0rem">
             {/* Info about me */}
             <div className="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-800 hover:bg-gray-700 transform hover:-translate-y-1 hover:scale-105">
               <p className="text-lg mb-4 md:text-xl lg:text-lg">
@@ -42,7 +42,7 @@ const About = () => {
             </div>
 
             {/* Education details */}
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left px-10">
               <h1 className="text-4xl font-bold mb-4 ">Education</h1>
               <div className="mb-4">
                 <h2 className="text-2xl font-semibold">

@@ -121,7 +121,7 @@ const content = [
 function ProjectShow() {
   return (
     <div className="p-4 md:p-10 bg-black">
-      <div className="mx-4 md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+      <div className="md:mx-[6rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
         <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
           Projects
         </h1>

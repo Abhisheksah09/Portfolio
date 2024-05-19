@@ -31,7 +31,7 @@ function LampDemo() {
         className="mt-8 px-4 md:px-8 lg:px-16 text-center"
       >
         <img
-          className="w-3/4 md:w-1/3 lg:w-1/5 mx-auto pb-8"
+          className="w-3/4 md:w-1/3 lg:w-[17%] mx-auto pb-8"
           src={image}
           alt="Logo"
         />
