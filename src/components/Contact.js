@@ -95,9 +95,13 @@ function Contact() {
                     </div>
                     <div className=" grow ">
                       <p className="mb-2 font-bold text-white">Contact</p>
-                      <p className="text-neutral-500 dark:text-neutral-200 text-lg py-1">
+
+                      <a
+                        href={`tel:8879003313`}
+                        className="text-neutral-500 dark:text-neutral-200 break-all"
+                      >
                         8879003313
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -123,9 +127,13 @@ function Contact() {
                     </div>
                     <div className=" grow">
                       <p className="mb-2 font-bold text-white">Email</p>
-                      <p className="text-neutral-500 dark:text-neutral-200">
+
+                      <a
+                        href="https://mail.google.com/mail/u/0/#inbox"
+                        className="text-neutral-500 dark:text-neutral-200 break-all"
+                      >
                         sahabhishek097@gmail.com
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -152,9 +160,13 @@ function Contact() {
                     </div>
                     <div className=" grow">
                       <p className="mb-2 font-bold text-white">GitHub</p>
-                      <p className="text-neutral-500 dark:text-neutral-200">
+
+                      <a
+                        href="https://github.com/Abhisheksah09/"
+                        className="text-neutral-500 dark:text-neutral-200 break-all"
+                      >
                         github.com/Abhisheksah09
-                      </p>
+                      </a>
                     </div>
                   </div>
                 </div>

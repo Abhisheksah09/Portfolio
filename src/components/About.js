@@ -15,7 +15,6 @@ const About = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10 py-6 md:px-10 lg:px-[0rem">
-            {/* Info about me */}
             <div className="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-gray-800 hover:bg-gray-700 transform hover:-translate-y-1 hover:scale-105">
               <p className="text-lg mb-4 md:text-xl lg:text-lg">
                 As a dedicated Junior Full Stack Developer, I specialize in
@@ -41,7 +40,6 @@ const About = () => {
               </p>
             </div>
 
-            {/* Education details */}
             <div className="text-center md:text-left px-10">
               <h1 className="text-3xl font-bold mb-4 ">Education</h1>
               <div className="mb-4">
