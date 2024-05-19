@@ -9,6 +9,7 @@ const content = [
     title: "E-COMMERCE WEBSITE",
     description:
       "I contributed to developing a dynamic E-commerce website focused on clothing, improving user experience with features like userfriendly product browsing, secure payment gateways, personalized user accounts. Additionally, I implemented an intuitive admin panel for streamlined management of product listings, inventory tracking, and order fulfillment. Leveraging my expertise in React.js, JavaScript, Tailwind CSS, Node.js, Express.js, MongoDB, and Mongoose, I optimized the website's performance and enhanced its functionality. ",
+    githubLink: "https://github.com/Abhisheksah09/E-Commerce-Website",
     content: (
       <>
         <div className="h-full w-full relative flex items-center justify-center text-white">
@@ -46,6 +47,8 @@ const content = [
     title: "User Management API",
     description:
       "I have proficiently developed a robust User Management API with comprehensive Authentication and Authorization functionalities, encompassing user registration, login, user profile management, and OTP-based login. Additionally, the API includes email confirmation with OTP upon user signup. Notably, I also designed and implemented an Admin panel, restricting access to authorized personnel for viewing and updating user data. Leveraging my expertise in React.js, JavaScript, Tailwind CSS, Node.js, Express.js, MongoDB, and Mongoose, I successfully executed this project, showcasing my adeptness in full-stack web development.",
+    githubLink: "https://github.com/Abhisheksah09/User-Management-API",
+
     content: (
       <>
         <div className="h-full w-full relative flex items-center justify-center text-white">
@@ -83,6 +86,8 @@ const content = [
     title: "RESTAURANT WEBSITE",
     description:
       "I crafted a user-friendly restaurant website with login/signup, table booking, and catering service reservations to simplify the dining experience for customers. Additionally, I've curated an engaging user experience by incorporating dynamic elements like interactive menus, enticing image galleries showcasing the restaurant's ambiance, and subtle animations throughout the site. The designed and implemented only the frontend of the restaurant website using HTML, CSS, and JavaScript.",
+    githubLink: "https://github.com/Abhisheksah09/Restaurant-Website",
+
     content: (
       <>
         <div className="h-full w-full object-cover relative flex items-center justify-center text-white">

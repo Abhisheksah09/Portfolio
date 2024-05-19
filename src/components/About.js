@@ -43,7 +43,7 @@ const About = () => {
 
             {/* Education details */}
             <div className="text-center md:text-left px-10">
-              <h1 className="text-4xl font-bold mb-4 ">Education</h1>
+              <h1 className="text-3xl font-bold mb-4 ">Education</h1>
               <div className="mb-4">
                 <h2 className="text-2xl font-semibold">
                   Bachelor of Information Technology (BSc.IT)

@@ -30,13 +30,14 @@ const StickyScroll = ({ content, contentClassName }) => {
   const backgroundColors = [
     "var(--neutral-900)",
     "var(--slate-900)",
-    "var(--gray-800)",
+    "var(--gray-700)",
   ];
   const linearGradients = [
     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
     "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
+
   return (
     <motion.div
       animate={{
@@ -68,10 +69,26 @@ const StickyScroll = ({ content, contentClassName }) => {
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-sm lg:text-base  text-slate-300 mt-5 lg:mt-10 sm:text-base  mb-4  text-start md:text-base"
+                className="text-sm lg:text-base text-slate-300 mt-5 lg:mt-10 sm:text-base mb-4 text-start md:text-base"
               >
                 {item.description}
               </motion.p>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-sm lg:text-base text-slate-300 mt-5 lg:mt-10 sm:text-base mb-4 text-start md:text-base"
+              >
+                <button
+                  className="bg-gray-800 hover:bg-black text-white font-bold py-2 px-4 rounded"
+                  onClick={() => window.open(item.githubLink, "_blank")}
+                >
+                  View Code
+                </button>
+              </motion.div>
               <div className="block lg:hidden mt-5">{item.content ?? null}</div>
             </div>
           ))}
@@ -83,7 +100,7 @@ const StickyScroll = ({ content, contentClassName }) => {
           background: linearGradients[activeCard % linearGradients.length],
         }}
         className={cn(
-          "hidden lg:block h-80  w-full lg:w-90 rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-80 w-full lg:w-90 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >

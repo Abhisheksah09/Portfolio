@@ -71,12 +71,12 @@ function Contact() {
                 </button>
               </form>
             </div>
-            <div className="w-full lg:w-7/12 mt-8 lg:mt-0 text-center md:text-left">
-              <div className="flex flex-wrap">
-                <div className="mb-12 w-full md:w-1/2 lg:px-6">
-                  <div className="flex items-start">
+            <div className="w-full lg:w-7/12 mt-8 lg:mt-0 text-center md:text-center mx-auto">
+              <div className="flex flex-wrap justify-center">
+                <div className="mb-12 w-full md:w-1/2 lg:w-1/3 px-4">
+                  <div className="flex items-start justify-center">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100   text-primary">
+                      <div className="inline-block rounded-md bg-primary-100 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -93,7 +93,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className=" grow">
+                    <div className="grow text-center">
                       <p className="mb-2 font-bold text-white">Contact</p>
                       <p className="text-neutral-500 dark:text-neutral-200 text-lg py-1">
                         8879003313
@@ -101,10 +101,10 @@ function Contact() {
                     </div>
                   </div>
                 </div>
-                <div className="mb-12 w-full md:w-1/2 lg:px-6">
-                  <div className="flex items-start">
+                <div className="mb-12 w-full md:w-1/2 lg:w-1/3 px-4">
+                  <div className="flex items-start justify-center">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100   text-primary">
+                      <div className="inline-block rounded-md bg-primary-100 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -121,7 +121,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className=" grow">
+                    <div className="grow text-center">
                       <p className="mb-2 font-bold text-white">Email</p>
                       <p className="text-neutral-500 dark:text-neutral-200">
                         sahabhishek097@gmail.com
@@ -129,11 +129,10 @@ function Contact() {
                     </div>
                   </div>
                 </div>
-
-                <div className="mb-12 w-full md:w-1/2 lg:px-6">
-                  <div className="flex items-start">
+                <div className="mb-12 w-full md:w-1/2 lg:w-1/3 px-4">
+                  <div className="flex items-start justify-center">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100   text-primary">
+                      <div className="inline-block rounded-md bg-primary-100 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -150,7 +149,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className=" grow">
+                    <div className="grow text-center">
                       <p className="mb-2 font-bold text-white">GitHub</p>
                       <p className="text-neutral-500 dark:text-neutral-200">
                         github.com/Abhisheksah09
@@ -158,11 +157,10 @@ function Contact() {
                     </div>
                   </div>
                 </div>
-
-                <div className="mb-12 w-full md:w-1/2 px-4 md:px-3 lg:px-6">
-                  <div className="flex items-start">
+                <div className="mb-12 w-full md:w-1/2 lg:w-1/3 px-4">
+                  <div className="flex items-start justify-center">
                     <div className="shrink-0">
-                      <div className="inline-block rounded-md bg-primary-100   text-primary">
+                      <div className="inline-block rounded-md bg-primary-100 text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -179,7 +177,7 @@ function Contact() {
                         </svg>
                       </div>
                     </div>
-                    <div className=" grow">
+                    <div className="grow text-center">
                       <p className="mb-2 font-bold text-white">LinkedIn</p>
                       <a
                         href="https://www.linkedin.com/in/abhishek-sah-782409265/"

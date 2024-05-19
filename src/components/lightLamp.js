@@ -76,12 +76,6 @@ function LampDemo() {
           >
             <FaGithub className="text-3xl md:text-4xl" />
           </a>
-          <a
-            href="mailto:sahabhishek097@gmail.com"
-            className="text-white hover:text-cyan-500"
-          >
-            <BiLogoGmail className="text-3xl md:text-4xl" />
-          </a>
         </div>
       </motion.div>
     </LampContainer>
