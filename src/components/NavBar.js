@@ -15,7 +15,14 @@ function NavBar() {
     }
   };
 
-  const navSection = ["home", "about", "skills", "projects", "contact"];
+  const navSection = [
+    "home",
+    "about",
+    "experience",
+    "skills",
+    "projects",
+    "contact",
+  ];
 
   return (
     <div className="w-full fixed top-0 z-50">

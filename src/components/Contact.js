@@ -31,7 +31,7 @@ function Contact() {
         <p className="py-4 md:py-6 text-gray-300">Let's Work Together</p>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 lg:px-20">
+      <div className="container mx-auto px-4 md:px-6 text-center lg:px-20">
         <section className="mb-32">
           <div className="flex flex-wrap">
             <div className="mb-12 w-full md:w-1/2 lg:w-5/12 lg:px-6">
