@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -10,20 +11,48 @@ const experiences = [
   },
 ];
 
+const headingVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.9, ease: "easeOut" },
+  },
+};
+
+const topToBottomVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.4, ease: "easeOut" },
+  },
+};
+
 const Experience = () => {
   return (
-    <div className="min-w-screen-lg bg-black text-white text-justify p-4 md:p-8">
-      <div className="mx-4 md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+    <div className="min-w-screen-lg bg-black text-white text-justify p-4 md:p-8 overflow-hidden">
+      <motion.div
+        className="mx-4  md:mx-[5rem] sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
+        initial="hidden"
+        whileInView="visible"
+        variants={headingVariants}
+        viewport={{ once: false }}
+      >
         <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
           Experience
         </h1>
         <p className="py-4 md:py-6 text-gray-300">Professional Experience</p>
-      </div>
+      </motion.div>
       <div className="grid gap-4 md:gap-8 w-full">
         {experiences.map((experience, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg transition duration-300 hover:scale-105 hover:bg-gray-700 hover:shadow-lg"
+            className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg  hover:scale-105 hover:bg-gray-700 hover:shadow-lg"
+            initial="hidden"
+            whileInView="visible"
+            variants={topToBottomVariants}
+            viewport={{ once: false }}
           >
             <h2 className="text-lg md:text-xl font-semibold mb-2 text-white text-center sm:text-left">
               {experience.role}
@@ -37,7 +66,7 @@ const Experience = () => {
             <p className="text-gray-500 text-sm md:text-base">
               {experience.duration}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

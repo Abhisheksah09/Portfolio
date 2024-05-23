@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 function Contact() {
   const form = useRef();
@@ -22,19 +23,58 @@ function Contact() {
       );
   };
 
+  const headingVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+
+  const leftTorighttVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1.4, ease: "easeOut" },
+    },
+  };
+
+  const topToBottomVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.5, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="bg-black py-12 px-2">
-      <div className="md:mx-[7rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
+      <motion.div
+        className="md:mx-[5rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
+        initial="hidden"
+        whileInView="visible"
+        variants={headingVariants}
+        viewport={{ once: false }}
+      >
         <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
           Contact
         </h1>
         <p className="py-4 md:py-6 text-gray-300">Let's Work Together</p>
-      </div>
+      </motion.div>
 
       <div className="container mx-auto px-4 md:px-6 text-center lg:px-20">
         <section className="mb-32">
           <div className="flex flex-wrap">
-            <div className="mb-12 w-full md:w-1/2 lg:w-5/12 lg:px-6">
+            <motion.div
+              className="mb-12 w-full md:w-1/2 lg:w-5/12 lg:px-6"
+              initial="hidden"
+              whileInView="visible"
+              variants={leftTorighttVariants}
+              viewport={{ once: false }}
+            >
               <form ref={form} onSubmit={sendEmail}>
                 <div className="relative mb-6">
                   <input
@@ -70,9 +110,15 @@ function Contact() {
                   Send
                 </button>
               </form>
-            </div>
-            <div className="w-full lg:w-7/12 mt-8 lg:mt-0 text-center   md:text-left">
-              <div className="flex flex-wrap ">
+            </motion.div>
+            <div className="w-full lg:w-7/12 mt-8 lg:mt-0 text-center pt-10   md:text-left">
+              <motion.div
+                className="flex flex-wrap "
+                initial="hidden"
+                whileInView="visible"
+                variants={topToBottomVariants}
+                viewport={{ once: false }}
+              >
                 <div className="mb-12 w-full md:w-1/2 lg:px-8">
                   <div className="flex items-start">
                     <div className="shrink-0">
@@ -202,7 +248,7 @@ function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

@@ -3,6 +3,7 @@ import StickyScroll from "../components/ui/project-scroll";
 import ecommerce from "../Images/e-commerce.png";
 import usermanagement from "../Images/user-management.png";
 import restaurant from "../Images/restautant.png";
+import { motion } from "framer-motion";
 
 const content = [
   {
@@ -123,14 +124,33 @@ const content = [
   },
 ];
 
+const headingVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.9, ease: "easeOut" },
+  },
+};
+
 function ProjectShow() {
   return (
     <div className="p-4 md:p-10 bg-black">
-      <div className="md:mx-[6rem]  sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
-        <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
-          Projects
-        </h1>
-        <p className="py-4 md:py-6 text-gray-300">A Showcase of My Best Work</p>
+      <div>
+        <motion.div
+          className="mx-4 md:mx-[4rem] text-white sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
+          initial="hidden"
+          whileInView="visible"
+          variants={headingVariants}
+          viewport={{ once: false }}
+        >
+          <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
+            Projects
+          </h1>
+          <p className="py-4 md:py-6 text-gray-300">
+            A Showcase of My Best Work
+          </p>
+        </motion.div>
       </div>
 
       <StickyScroll content={content} />

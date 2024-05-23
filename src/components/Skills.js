@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import html from "../Images/HTML.png";
 import css from "../Images/CSS.png";
 import javascript from "../Images/JS.png";
@@ -26,7 +27,7 @@ const Skills = () => {
     {
       id: 3,
       src: javascript,
-      title: "Javascrip",
+      title: "JavaScript",
       style: "shadow-yellow-500",
     },
     {
@@ -48,55 +49,82 @@ const Skills = () => {
       style: "shadow-yellow-500",
     },
     {
-      id: 6,
+      id: 7,
       src: tailwind,
       title: "Tailwind CSS",
       style: "shadow-cyan-300",
     },
     {
-      id: 7,
+      id: 8,
       src: mongodb,
-      title: "mongoDB",
+      title: "MongoDB",
       style: "shadow-green-600",
     },
     {
-      id: 8,
+      id: 9,
       src: sql,
       title: "SQL",
       style: "shadow-blue-500",
     },
   ];
+
+  const headingVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.9, ease: "easeOut" },
+    },
+  };
+
+  const topToBottomVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <>
-      <div
-        name="skills"
-        className="bg-gradient-to-b from-gray-900 to-black w-full "
+    <div
+      name="skills"
+      className="bg-gradient-to-b from-gray-900 to-black w-full"
+    >
+      <motion.div
+        className="md:mx-[7rem] md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
+        initial="hidden"
+        whileInView="visible"
+        variants={headingVariants}
+        viewport={{ once: false }}
       >
-        <div className="md:mx-[8rem] md:text-left sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left">
-          <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
-            Skills
-          </h1>
-          <p className="py-4 md:py-6 text-gray-300">
-            These are the technologies I've worked with
-          </p>
-        </div>
-        <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-          <div className=" w-full grid grid-cols-2 mx-auto sm:grid-cols-3 gap-8 text-center py-8 sm:px-0">
-            {techs.map(({ id, src, title, style }) => {
-              return (
-                <div
-                  key={id}
-                  className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-                >
-                  <img src={src} alt="" className="w-20 m-auto" />
-                  <p className=" mt-4">{title}</p>
-                </div>
-              );
-            })}
-          </div>
+        <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
+          Skills
+        </h1>
+        <p className="py-4 md:py-6 text-gray-300">
+          These are the technologies I've worked with
+        </p>
+      </motion.div>
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+        <div className=" w-full grid grid-cols-2 mx-auto sm:grid-cols-3 gap-8 text-center py-8 sm:px-0">
+          {techs.map(({ id, src, title, style }) => {
+            return (
+              <motion.div
+                key={id}
+                className={`shadow-md hover:scale-105  py-2 rounded-lg ${style}`}
+                initial="hidden"
+                whileInView="visible"
+                variants={topToBottomVariants}
+                viewport={{ once: false }}
+              >
+                <img src={src} alt="" className="w-20 m-auto" />
+                <p className=" mt-4">{title}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

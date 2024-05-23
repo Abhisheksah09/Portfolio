@@ -38,6 +38,15 @@ const StickyScroll = ({ content, contentClassName }) => {
     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
 
+  const topToBottomVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1.4, ease: "easeOut" },
+    },
+  };
+
   return (
     <motion.div
       animate={{
@@ -46,6 +55,10 @@ const StickyScroll = ({ content, contentClassName }) => {
       className="h-[30rem] overflow-y-auto overflow-x-hidden flex justify-center relative space-x-10 lg:space-x-40 rounded-md p-5 lg:p-10"
       ref={ref}
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      initial="hidden"
+      whileInView="visible"
+      variants={topToBottomVariants}
+      viewport={{ once: false }}
     >
       <div className="relative flex flex-col lg:flex-row items-start px-4 w-full max-w-2xl">
         <div className="w-full">
