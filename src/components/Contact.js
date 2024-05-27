@@ -1,26 +1,72 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 
 function Contact() {
-  const form = useRef();
+  const formRef = useRef();
+
+  const [form, setForm] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    let errors = {};
+
+    if (!form.from_name) {
+      errors.from_name = "Name is required";
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!form.from_email) {
+      errors.from_email = "Email is required";
+    } else if (!emailPattern.test(form.from_email)) {
+      errors.from_email = "Email is invalid";
+    }
+
+    if (!form.message) {
+      errors.message = "Message is required";
+    }
+
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm("service_1aqvn1u", "template_ajw35ws", form.current, {
-        publicKey: "9OqJmoJu0ShvBOf56",
-      })
-      .then(
-        () => {
-          toast.success("Message sent successfully");
-        },
-        (error) => {
-          toast.error("FAILED...", error.text);
-        }
-      );
+    if (validate()) {
+      emailjs
+        .sendForm("service_1aqvn1u", "template_ajw35ws", formRef.current, {
+          publicKey: "9OqJmoJu0ShvBOf56",
+        })
+        .then(
+          () => {
+            toast.success("Message sent successfully");
+            setForm({
+              from_name: "",
+              from_email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            toast.error("FAILED...", error.text);
+          }
+        );
+    } else {
+      console.log("Form is invalid");
+    }
   };
 
   const headingVariants = {
@@ -32,7 +78,7 @@ function Contact() {
     },
   };
 
-  const leftTorighttVariants = {
+  const leftToRightVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
@@ -72,10 +118,10 @@ function Contact() {
               className="mb-12 w-full md:w-1/2 lg:w-5/12 lg:px-6"
               initial="hidden"
               whileInView="visible"
-              variants={leftTorighttVariants}
+              variants={leftToRightVariants}
               viewport={{ once: false }}
             >
-              <form ref={form} onSubmit={sendEmail}>
+              <form ref={formRef} onSubmit={sendEmail}>
                 <div className="relative mb-6">
                   <input
                     type="text"
@@ -83,7 +129,12 @@ function Contact() {
                     className="block w-full border-2 border-solid-black rounded bg-transparent py-1 px-3 text-white outline-none transition-all duration-200 ease-linear"
                     id="exampleInput90"
                     placeholder="Name"
+                    value={form.from_name}
+                    onChange={handleChange}
                   />
+                  {errors.from_name && (
+                    <p className="text-red-500 text-xs">{errors.from_name}</p>
+                  )}
                 </div>
                 <div className="relative mb-6">
                   <input
@@ -92,7 +143,12 @@ function Contact() {
                     className="block w-full border-2 border-solid-black rounded bg-transparent py-1 px-3 text-white outline-none transition-all duration-200 ease-linear"
                     id="exampleInput91"
                     placeholder="Email address"
+                    value={form.from_email}
+                    onChange={handleChange}
                   />
+                  {errors.from_email && (
+                    <p className="text-red-500 text-xs">{errors.from_email}</p>
+                  )}
                 </div>
                 <div className="relative mb-6">
                   <textarea
@@ -101,7 +157,12 @@ function Contact() {
                     rows="3"
                     placeholder="Your message"
                     name="message"
+                    value={form.message}
+                    onChange={handleChange}
                   ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500 text-xs">{errors.message}</p>
+                  )}
                 </div>
                 <button
                   type="submit"
