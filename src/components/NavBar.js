@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
+import Rklogo from "../Images/Rk-Logo.png";
 
 function NavBar() {
   const [nav, setNav] = useState(false);
@@ -25,19 +26,17 @@ function NavBar() {
   ];
 
   return (
-    <div className="w-full fixed top-0 z-50 bg-black">
+    <div className="w-full fixed top-0 z-50 bg-transparent">
       <div className="flex justify-between items-center w-full h-[80px] px-4">
         <div>
-          <h1 className="text-4xl md:text-6xl font-allura text-cyan-500 px-4 md:px-8">
-            Abhi
-          </h1>
+          {/* <img className="w-[30%] m-auto pt-10" src={Rklogo} alt="Logo" /> */}
         </div>
 
         <ul className="hidden md:flex">
           {navSection.map((id) => (
             <li
               key={id}
-              className="px-4 md:px-4 lg:px-8 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-cyan-500 duration-200"
+              className="px-4 md:px-4 lg:px-8 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-[#d90a2c] duration-200"
               onClick={() => smoothScroll(`#${id}`)}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}

@@ -3,11 +3,26 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "Full Stack Developer Intern",
-    company: "Innobyte Services",
+    role: "Assistant music director",
+    company: "Elixir Studio,",
     description:
-      "During my three-month internship as a Full Stack Developer, I had the opportunity to immerse myself in various aspects of web development, working both on the front-end and back-end. This internship provided me with invaluable experience and a solid foundation in full stack development. Throughout the internship, I successfully completed all the tasks assigned to me, demonstrating my ability to learn quickly and apply new knowledge effectively. In the final phase of my internship, I was entrusted with a significant project: developing a comprehensive User Management API. This project involved the entire development lifecycle, from initial design and planning to implementation and testing. The API was designed to handle various user-related functionalities, including user registration, authentication, profile management, and role-based access control. By the end of the internship, I had not only completed the User Management API project successfully but also gained a deeper understanding of full stack development. This experience has equipped me with the skills and confidence to tackle complex development challenges and contribute effectively to future projects.",
-    duration: "11 February 2024 - 10 April 2024",
+      "As an Assistant to the Music Director at Elixir Studio from December 17, 2021, to May 31, 2024, I had the invaluable opportunity to immerse myself deeply in the world of music production and composition. Throughout my tenure, I played a crucial role in various projects, supporting the music director in planning, organizing, and executing music production tasks. My responsibilities included collaborating on creative ideas during brainstorming sessions, assisting with sound engineering, mixing, and mastering, and using industry-standard software such as Pro Tools, Logic Pro, and Ableton Live. ",
+    duration: "17 December 2021 - 31 May 2024 ",
+  },
+  {
+    role: "Collaborative Experience with a Music Director",
+    company: " ",
+    description:
+      "Working closely with the music director on various projects has been an enriching and transformative experience, providing me with hands-on exposure to both music production and composition. I assisted in planning and executing music projects, contributing creative ideas during brainstorming sessions, and enhancing the overall quality of the projects. My involvement in the technical aspects of music production, such as sound engineering, mixing, and mastering, allowed me to use industry-standard software like Pro Tools, Logic Pro, and Ableton Live. ",
+    duration: " ",
+  },
+  {
+    description:
+      "Worked closely with the music director on various projects, gaining hands-on experience in music production and compostion.",
+  },
+  {
+    description:
+      "Worked closely with the music director on various projects, gaining hands-on experience in music production and compostion.",
   },
 ];
 
@@ -33,38 +48,54 @@ const Experience = () => {
   return (
     <div className="min-w-screen-lg bg-black text-white text-justify p-4 md:p-8 overflow-hidden">
       <motion.div
-        className="mx-4  md:mx-[5rem] sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
+        className="mx-4 md:mx-[5rem] sm:mx-[6rem] py-6 md:py-10 text-center sm:text-left"
         initial="hidden"
         whileInView="visible"
         variants={headingVariants}
         viewport={{ once: false }}
       >
-        <h1 className="text-4xl font-bold border-b-4 border-cyan-500 p-2 inline">
+        <h1 className="text-4xl font-bold border-b-4 border-[#d90a2c] p-2 inline">
           Experience
         </h1>
         <p className="py-4 md:py-6 text-gray-300">Professional Experience</p>
       </motion.div>
-      <div className="grid gap-4 md:gap-8 w-full">
+      {/* <h2 className="text-lg md:text-xl font-semibold mb-2 text-white text-center sm:text-left">
+        Assistant music director
+      </h2>
+      <h3 className="text-base md:text-lg  text-cyan-400 text-center sm:text-left">
+        Elixir Studio
+      </h3>
+      <p className="text-gray-500 mb-3 text-sm md:text-base">
+        17 December 2021 - 31 May 2024
+      </p> */}
+
+      <div className="grid gap-4 md:gap-8 w-full grid-cols-1 md:grid-cols-2">
         {experiences.map((experience, index) => (
           <motion.div
             key={index}
-            className="bg-gray-800 p-4 md:p-6 rounded-lg shadow-lg  hover:scale-105 hover:bg-gray-700 hover:shadow-lg"
+            className="bg-gray-700 p-4 md:p-6 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-500 hover:shadow-lg"
             initial="hidden"
             whileInView="visible"
             variants={topToBottomVariants}
             viewport={{ once: false }}
           >
-            <h2 className="text-lg md:text-xl font-semibold mb-2 text-white text-center sm:text-left">
-              {experience.role}
-            </h2>
-            <h3 className="text-base md:text-lg mb-4 text-cyan-400 text-center sm:text-left">
-              {experience.company}
-            </h3>
+            {experience.role && (
+              <h2 className="text-lg md:text-xl font-semibold mb-2 text-white text-center sm:text-left">
+                {experience.role}
+              </h2>
+            )}
+            {experience.company && (
+              <h3 className="text-base md:text-lg  text-cyan-400 text-center sm:text-left">
+                {experience.company}
+              </h3>
+            )}
+            {experience.duration && (
+              <p className="text-gray-500 mb-3 text-sm md:text-base">
+                {experience.duration}
+              </p>
+            )}
             <p className="mb-4 text-gray-300 text-sm text-start md:text-base">
               {experience.description}
-            </p>
-            <p className="text-gray-500 text-sm md:text-base">
-              {experience.duration}
             </p>
           </motion.div>
         ))}

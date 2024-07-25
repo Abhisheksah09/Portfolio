@@ -19,7 +19,7 @@ function LampDemo() {
   };
 
   return (
-    <LampContainer>
+    <div>
       <motion.div
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ function LampDemo() {
           </a>
         </div>
       </motion.div>
-    </LampContainer>
+    </div>
   );
 }
 

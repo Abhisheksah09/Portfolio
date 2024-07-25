@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import html from "../Images/HTML.png";
-import css from "../Images/CSS.png";
+import Adfilm from "../Images/Adfilm.jpg";
+import Tv from "../Images/Tv.jpg";
 import javascript from "../Images/JS.png";
 import react from "../Images/REACT.png";
 import node from "../Images/NODE.png";
@@ -14,15 +14,15 @@ const Skills = () => {
   const techs = [
     {
       id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
+      src: Adfilm,
+      title: "Advertisment films",
+      style: "shadow-yellow-700",
     },
     {
       id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
+      src: Tv,
+      title: "Television Shows & movies",
+      style: "shadow-white",
     },
     {
       id: 3,
@@ -98,12 +98,10 @@ const Skills = () => {
         variants={headingVariants}
         viewport={{ once: false }}
       >
-        <h1 className="text-4xl text-white font-bold border-b-4 border-cyan-500 p-2 inline">
-          Skills
+        <h1 className="text-4xl text-white font-bold border-b-4 border-[#d90a2c] p-2 inline">
+          KEY HIGHLIGHTS
         </h1>
-        <p className="py-4 md:py-6 text-gray-300">
-          These are the technologies I've worked with
-        </p>
+        <p className="py-4 md:py-6 text-gray-300">The Work I Take</p>
       </motion.div>
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div className=" w-full grid grid-cols-2 mx-auto sm:grid-cols-3 gap-8 text-center py-8 sm:px-0">
@@ -117,7 +115,7 @@ const Skills = () => {
                 variants={topToBottomVariants}
                 viewport={{ once: false }}
               >
-                <img src={src} alt="" className="w-20 m-auto" />
+                <img src={src} alt="" className="w-[50%] m-auto" />
                 <p className=" mt-4">{title}</p>
               </motion.div>
             );
